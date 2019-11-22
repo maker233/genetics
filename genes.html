@@ -1,53 +1,43 @@
 <!DOCTYPE html>
 <html lang="es">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
 
-    <link
-      href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
-      rel="stylesheet"
-      integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T"
-      crossorigin="anonymous"
-    />
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta http-equiv="X-UA-Compatible" content="ie=edge" />
 
-    <style>
-      a {
-        color: white;
-      }
-      span {
-        font-size: 15px;
-        color: black;
-        padding: 10px;
-      }
-    </style>
+  <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" rel="stylesheet"
+    integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous" />
 
-    <title>Super Gens!</title>
-  </head>
-  <body>
-    <div class="container">
-      <div class="row">
-        <div class="col-md-6 col-sm-10" style="padding-top:70px;">
-          <h3>Hola Genetista!</h3>
-          <div class="input-group mt-3 mb-3">
-            <div class="input-group-prepend">
-              <span class="input-group-text" id="basic-addon3"
-                >Introduce el RS</span
-              >
-            </div>
-            <input
-              id="rs"
-              type="text"
-              class="form-control"
-              id="basic-url"
-              aria-describedby="basic-addon3"
-              placeholder="Ej. rs2241888"
-              required
-            />
+  <style>
+    a {
+      color: white;
+    }
+
+    span {
+      font-size: 15px;
+      color: black;
+      padding: 10px;
+    }
+  </style>
+
+  <title>Super Gens!</title>
+</head>
+
+<body>
+  <div class="container">
+    <div class="row">
+      <div class="col-md-6 col-sm-10" style="padding-top:70px;">
+        <h3>Hola Genetista!</h3>
+        <div class="input-group mt-3 mb-3">
+          <div class="input-group-prepend">
+            <span class="input-group-text" id="basic-addon3">Introduce el RS</span>
           </div>
+          <input id="rs" type="text" class="form-control" id="basic-url" aria-describedby="basic-addon3"
+            placeholder="Ej. rs2241888" required />
+        </div>
 
-          <div class="input-group mt-3 mb-3">
+        <!-- <div class="input-group mt-3 mb-3">
             <div class="input-group-prepend">
               <span class="input-group-text" id="basic-addon3"
                 >Introduce la Mutación</span
@@ -79,152 +69,113 @@
               placeholder="Ej. rs2241888"
               required
             />
-          </div>
+          </div> -->
 
-          <hr />
-          <br />
+        <hr />
+        <br />
 
-          <div class="row">
-            <div class="col-9 ">
-              <div class="input-group mb-3">
-                <div class="input-group-prepend">
-                  <div class="input-group-text">
-                    <input
-                      id="0"
-                      type="checkbox"
-                      aria-label="Checkbox for following text input"
-                    />
-                  </div>
+        <div class="row">
+          <div class="col-9 ">
+            <div class="input-group mb-3">
+              <div class="input-group-prepend">
+                <div class="input-group-text">
+                  <input id="0" type="checkbox" aria-label="Checkbox for following text input" />
                 </div>
-                <input
-                  type="text"
-                  class="form-control"
-                  aria-label="Text input with checkbox"
-                  value="ClinVar"
-                  disabled
-                />
               </div>
-              <div class="input-group mb-3">
-                <div class="input-group-prepend">
-                  <div class="input-group-text">
-                    <input
-                      id="1"
-                      type="checkbox"
-                      aria-label="Checkbox for following text input"
-                    />
-                  </div>
-                </div>
-                <input
-                  type="text"
-                  class="form-control"
-                  aria-label="Text input with checkbox"
-                  value="Ensembl (GRCh37)"
-                  disabled
-                />
-              </div>
-              <div class="input-group mb-3">
-                <div class="input-group-prepend">
-                  <div class="input-group-text">
-                    <input
-                      id="2"
-                      type="checkbox"
-                      aria-label="Checkbox for following text input"
-                    />
-                  </div>
-                </div>
-                <input
-                  type="text"
-                  class="form-control"
-                  aria-label="Text input with checkbox"
-                  value="Ensembl (GRCh38)"
-                  disabled
-                />
-              </div>
-              <div class="input-group mb-3">
-                <div class="input-group-prepend">
-                  <div class="input-group-text">
-                    <input
-                      id="3"
-                      type="checkbox"
-                      aria-label="Checkbox for following text input"
-                    />
-                  </div>
-                </div>
-                <input
-                  type="text"
-                  class="form-control"
-                  aria-label="Text input with checkbox"
-                  value="VARSOME"
-                  disabled
-                />
-              </div>
-
-              <button type="submit" class="btn btn-primary" onclick="checks()">
-                Abrir seleccionados
-              </button>
+              <input type="text" class="form-control" aria-label="Text input with checkbox" value="ClinVar" disabled />
             </div>
-            <div class="col-3">
-              <button type="button" class="btn btn-primary">
-                <a href="" target="_blank"> + Abrir </a>
-              </button>
-
-              <button type="button" class="btn btn-primary mt-3">
-                <a href="" target="_blank"> + Abrir </a>
-              </button>
-              <br />
-
-              <button type="button" class="btn btn-primary mt-3">
-                <a href="" target="_blank"> + Abrir </a>
-              </button>
-              <br />
-
-              <button type="button" class="btn btn-primary mt-3">
-                <a href="" target="_blank"> + Abrir </a>
-              </button>
+            <div class="input-group mb-3">
+              <div class="input-group-prepend">
+                <div class="input-group-text">
+                  <input id="1" type="checkbox" aria-label="Checkbox for following text input" />
+                </div>
+              </div>
+              <input type="text" class="form-control" aria-label="Text input with checkbox" value="Ensembl (GRCh37)"
+                disabled />
             </div>
+            <div class="input-group mb-3">
+              <div class="input-group-prepend">
+                <div class="input-group-text">
+                  <input id="2" type="checkbox" aria-label="Checkbox for following text input" />
+                </div>
+              </div>
+              <input type="text" class="form-control" aria-label="Text input with checkbox" value="Ensembl (GRCh38)"
+                disabled />
+            </div>
+            <div class="input-group mb-3">
+              <div class="input-group-prepend">
+                <div class="input-group-text">
+                  <input id="3" type="checkbox" aria-label="Checkbox for following text input" />
+                </div>
+              </div>
+              <input type="text" class="form-control" aria-label="Text input with checkbox" value="VARSOME" disabled />
+            </div>
+
+            <button type="submit" class="btn btn-primary" onclick="checks()">
+              Abrir seleccionados
+            </button>
           </div>
-        </div>
-        <div class="col-6">
-          <span style="position: absolute;bottom:0px;right:20px;color:grey;"
-            >Made with love to you.</span
-          >
+          <div class="col-3">
+            <button type="button" class="btn btn-primary">
+              <a href="" target="_blank"> + Abrir </a>
+            </button>
+
+            <button type="button" class="btn btn-primary mt-3">
+              <a href="" target="_blank"> + Abrir </a>
+            </button>
+            <br />
+
+            <button type="button" class="btn btn-primary mt-3">
+              <a href="" target="_blank"> + Abrir </a>
+            </button>
+            <br />
+
+            <button type="button" class="btn btn-primary mt-3">
+              <a href="" target="_blank"> + Abrir </a>
+            </button>
+          </div>
         </div>
       </div>
+      <div class="col-6">
+        <span style="position: absolute;bottom:0px;right:20px;color:grey;">Made with love to you.</span>
+      </div>
     </div>
+  </div>
 
-    <script>
-      document.getElementById("rs").addEventListener("keyup", function() {
-        const rs = document.getElementById("rs").value;
+  <script>
+    document.getElementById("rs").addEventListener("keyup", function () {
+      const rs = document.getElementById("rs").value;
 
-        var ncbi = "https://www.ncbi.nlm.nih.gov/clinvar/?term=" + rs;
-        var grch37 =
-          "https://grch37.ensembl.org/Homo_sapiens/Variation/Population?v=" +
-          rs;
-        var grch38 =
-          "https://www.ensembl.org/Homo_sapiens/Variation/Population?v=" + rs;
-        var varsome =
-          "https://varsome.com/security-validation/?next=/search-results/" + rs;
+      var ncbi = "https://www.ncbi.nlm.nih.gov/clinvar/?term=" + rs;
+      var grch37 =
+        "https://grch37.ensembl.org/Homo_sapiens/Variation/Population?v=" +
+        rs;
+      var grch38 =
+        "https://www.ensembl.org/Homo_sapiens/Variation/Population?v=" + rs;
+      var varsome =
+        "https://varsome.com/security-validation/?next=/search-results/" + rs;
 
-        document.querySelectorAll("button a")[0].setAttribute("href", ncbi);
-        document.querySelectorAll("button a")[1].setAttribute("href", grch37);
-        document.querySelectorAll("button a")[2].setAttribute("href", grch37);
-        document.querySelectorAll("button a")[3].setAttribute("href", varsome);
-      });
+      document.querySelectorAll("button a")[0].setAttribute("href", ncbi);
+      document.querySelectorAll("button a")[1].setAttribute("href", grch37);
+      document.querySelectorAll("button a")[2].setAttribute("href", grch38);
+      document.querySelectorAll("button a")[3].setAttribute("href", varsome);
+    });
 
-      function checks() {
-        if (document.getElementById("0").checked == true) {
-          document.querySelectorAll("button a")[0].click();
-        }
-        if (document.getElementById("1").checked == true) {
-          document.querySelectorAll("button a")[1].click();
-        }
-        if (document.getElementById("2").checked == true) {
-          document.querySelectorAll("button a")[2].click();
-        }
-        if (document.getElementById("3").checked == true) {
-          document.querySelectorAll("button a")[3].click();
-        }
+    function checks() {
+      if (document.getElementById("0").checked == true) {
+        document.querySelectorAll("button a")[0].click();
       }
-    </script>
-  </body>
+      if (document.getElementById("1").checked == true) {
+        document.querySelectorAll("button a")[1].click();
+      }
+      if (document.getElementById("2").checked == true) {
+        document.querySelectorAll("button a")[2].click();
+      }
+      if (document.getElementById("3").checked == true) {
+        document.querySelectorAll("button a")[3].click();
+      }
+    }
+  </script>
+</body>
+
 </html>
